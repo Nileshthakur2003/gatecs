@@ -17,7 +17,9 @@ const syllabusData = [
 
 export default function SyllabusPage() {
     const [search, setSearch] = useState("");
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [progress, setProgress] = useState<number[]>(Array(syllabusData.length).fill(0));
+    
     const [topicProgress, setTopicProgress] = useState<{ [subject: string]: { [topic: string]: boolean } }>(() => {
         const obj: { [subject: string]: { [topic: string]: boolean } } = {};
         syllabusData.forEach((item) => {
