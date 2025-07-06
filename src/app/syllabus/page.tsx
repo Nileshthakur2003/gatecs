@@ -193,3 +193,7 @@ export default function SyllabusPage() {
         </div>
     );
 }
+function setProgress(arg0: (prev: any) => any[]) {
+    throw new Error("Function not implemented.");
+}
+
