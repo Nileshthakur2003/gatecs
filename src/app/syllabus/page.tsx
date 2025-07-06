@@ -17,7 +17,7 @@ const syllabusData = [
 
 export default function SyllabusPage() {
     const [search, setSearch] = useState("");
-    const [progress, setProgress] = useState<number[]>(Array(syllabusData.length).fill(0));
+    //const [progress, setProgress] = useState<number[]>(Array(syllabusData.length).fill(0));
     const [topicProgress, setTopicProgress] = useState<{ [subject: string]: { [topic: string]: boolean } }>(() => {
         const obj: { [subject: string]: { [topic: string]: boolean } } = {};
         syllabusData.forEach((item) => {
@@ -136,7 +136,7 @@ export default function SyllabusPage() {
                         No subjects found.
                     </div>
                 )}
-                {filtered.map((item, idx) => {
+                {filtered.map((item) => {
                     const realIdx = syllabusData.findIndex((s) => s.subject === item.subject);
                     const isOpen = open === realIdx;
                     const topicsArr = item.topics.split(",").map((t) => t.trim());
